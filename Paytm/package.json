@@ -1,23 +1,22 @@
 {
-  "name": "with-tailwind",
+  "name": "week-18",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "check-types": "turbo run check-types",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@types/webpack": "^5.28.5",
-    "prettier": "^3.6.0",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.5.4"
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "npm@11.4.1",
+  "packageManager": "npm@10.2.4",
   "workspaces": [
     "apps/*",
     "packages/*"
