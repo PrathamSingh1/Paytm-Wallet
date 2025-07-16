@@ -39,6 +39,8 @@ export const authOptions = {
                         password: hashedPassword
                     }
                 });
+
+                // Todo: Send an otp to the users phone number
             
                 return {
                     id: user.id.toString(),
