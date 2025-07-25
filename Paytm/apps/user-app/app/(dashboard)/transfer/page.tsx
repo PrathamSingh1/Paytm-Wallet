@@ -3,6 +3,8 @@ import { authOptions } from "../../lib/auth";
 import { getServerSession } from "next-auth";
 import { time } from "console";
 import { AddMoney } from "../../../components/AddMoneyCard";
+import { BalanceCard } from "../../../components/BalanceCard";
+import { OnRampTransactions } from "../../../components/OnRampTransaction";
 
 
 
