@@ -6,8 +6,10 @@ const client = new PrismaClient();
 export const GET = async () => {
     await client.user.create({
         data: {
-            email: "asd",
-            name: "adsads"
+        email: "asd",
+        name: "adsads",
+        number: "1234567890",        
+        password: "yourHashedPassword" 
         }
     })
     return NextResponse.json({
