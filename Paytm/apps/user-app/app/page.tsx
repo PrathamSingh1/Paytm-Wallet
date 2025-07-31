@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 
 
 
-// Adding workflow with CI
+// Adding workflow with CI to build the code 
 
 
 
