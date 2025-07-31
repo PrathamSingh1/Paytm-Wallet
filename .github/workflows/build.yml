@@ -31,6 +31,18 @@ jobs:
           echo "NEXTAUTH_URL1=${{ secrets.NEXTAUTH_URL1 }}" >> .env
         working-directory: Paytm
 
+      - name: Copy .env to merchant-app
+        run: cp .env apps/merchant-app/.env
+        working-directory: Paytm
+
+      - name: Copy .env to user-app
+        run: cp .env apps/user-app/.env
+        working-directory: Paytm
+
+      - name: Copy .env to db
+        run: cp .env packages/db/.env
+        working-directory: Paytm
+
       - name: Generate Prisma Client
         run: npm run db:generate
         working-directory: Paytm
