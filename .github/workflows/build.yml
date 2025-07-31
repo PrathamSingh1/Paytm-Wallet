@@ -47,6 +47,14 @@ jobs:
         run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
         working-directory: Paytm
 
+      - name: Print .env in db
+        run: cat .env
+        working-directory: packages/db
+
+      - name: Print .env in merchant-app
+        run: cat .env
+        working-directory: apps/merchant-app
+
       - name: Generate Prisma Client
         run: npm run db:generate
         working-directory: Paytm
