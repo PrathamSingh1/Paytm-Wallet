@@ -10,6 +10,11 @@ jobs:
     name: Build the project
     runs-on: ubuntu-latest
     steps:
+      - name: Debug workspace structure
+        run: |
+          pwd
+          ls -lR
+          
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
