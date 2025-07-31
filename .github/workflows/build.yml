@@ -46,11 +46,11 @@ jobs:
 
       - name: Copy .env to db
         run: cp .env packages/db/.env
-        working-directory: Paytm/packages/db
+        working-directory: Paytm
 
       - name: Export DATABASE_URL for build
         run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
-        working-directory: Paytm/packages/db
+        working-directory: Paytm
 
       - name: Print .env in db
         run: cat .env
@@ -58,8 +58,8 @@ jobs:
 
       - name: Print .env in merchant-app
         run: cat .env
-        working-directory: apps/merchant-app
-
+        working-directory: Paytm/apps/merchant-app
+        
       - name: Generate Prisma Client
         run: npm run db:generate
         working-directory: Paytm
