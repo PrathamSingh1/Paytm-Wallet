@@ -18,6 +18,8 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: Paytm
 
       - name: Run Build
         run: npm run build
+        working-directory: Paytm
