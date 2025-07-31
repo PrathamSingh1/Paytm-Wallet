@@ -46,15 +46,15 @@ jobs:
 
       - name: Copy .env to db
         run: cp .env packages/db/.env
-        working-directory: Paytm
+        working-directory: Paytm/packages/db
 
       - name: Export DATABASE_URL for build
         run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
-        working-directory: Paytm
+        working-directory: Paytm/packages/db
 
       - name: Print .env in db
         run: cat .env
-        working-directory: packages/db
+        working-directory: Paytm/packages/db
 
       - name: Print .env in merchant-app
         run: cat .env
