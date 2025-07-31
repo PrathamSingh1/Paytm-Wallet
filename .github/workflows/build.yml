@@ -20,6 +20,10 @@ jobs:
         run: npm install
         working-directory: Paytm
 
+      - name: Generate Prisma Client
+        run: npx prisma generate
+        working-directory: Paytm
+
       - name: Run Build
         run: npm run build
         working-directory: Paytm
