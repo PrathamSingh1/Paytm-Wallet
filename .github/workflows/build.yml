@@ -10,11 +10,6 @@ jobs:
     name: Build the project
     runs-on: ubuntu-latest
     steps:
-      - name: Debug workspace structure
-        run: |
-          pwd
-          ls -lR
-          
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -34,38 +29,31 @@ jobs:
           echo "NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}" >> .env
           echo "NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> .env
           echo "NEXTAUTH_URL1=${{ secrets.NEXTAUTH_URL1 }}" >> .env
-        working-directory: Paytm
 
       - name: Copy .env to merchant-app
         run: cp .env apps/merchant-app/.env
-        working-directory: Paytm
 
       - name: Copy .env to user-app
         run: cp .env apps/user-app/.env
-        working-directory: Paytm
 
       - name: Copy .env to db
         run: cp .env packages/db/.env
-        working-directory: Paytm
 
       - name: Export DATABASE_URL for build
         run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> $GITHUB_ENV
-        working-directory: Paytm
 
       - name: Print .env in db
         run: cat .env
-        working-directory: Paytm/packages/db
+        working-directory: packages/db
 
       - name: Print .env in merchant-app
         run: cat .env
-        working-directory: Paytm/apps/merchant-app
+        working-directory: apps/merchant-app
         
       - name: Generate Prisma Client
         run: npm run db:generate
-        working-directory: Paytm
 
       - name: Run Build
         run: npm run build
-        working-directory: Paytm
         env: 
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
