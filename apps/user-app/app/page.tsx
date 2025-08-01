@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 
 
 
-// Adding workflow test for build
+// Adding workflow test for build script
 
 
 
