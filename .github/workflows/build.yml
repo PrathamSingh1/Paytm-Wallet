@@ -18,7 +18,6 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: Paytm
 
       - name: Create .env file
         run: |
