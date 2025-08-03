@@ -5,7 +5,10 @@
   "dependencies": {
     "recoil": "^0.7.7"
   },
+  "scripts": {
+  "build": "tsc --build"
+  },
   "exports": {
-    "./balance": "./src/hooks/useBalance"
+    "./balance": "./dist/hooks/useBalance.js"
   }
 }
