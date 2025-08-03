@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 
 
-// Testing CI
+// Testing CI builds
 
 export default async function Page() {
   const session = await getServerSession(authOptions);
