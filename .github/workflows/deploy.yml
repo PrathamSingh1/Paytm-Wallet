@@ -29,4 +29,4 @@ jobs:
           DATABASE_URL=${{ secrets.DATABASE_URL }}
 
     - name: Verify Pushed Image
-      run: docker pull prathamsingh123/cicd:latest  # Replace with your Docker Hub username and repository
+      run: docker pull prathamsingh123/cicd:latest
