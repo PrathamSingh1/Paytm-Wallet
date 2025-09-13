@@ -12,12 +12,12 @@ export function SendCard() {
 
     return <div className="h-[90vh]">
         <Center>
-            <Card title="Send">
+            <Card title="💸 Send Money">
                 <div className="min-w-72 pt-2">
-                    <TextInput placeholder={"Number"} label="Number" onChange={(value) => {
+                    <TextInput placeholder={"Number"} label="Recipient Number" onChange={(value) => {
                         setNumber(value)
                     }} />
-                    <TextInput placeholder={"Amount"} label="Amount" onChange={(value) => {
+                    <TextInput placeholder={"Amount"} label="Enter Amount" onChange={(value) => {
                         setAmount(value)
                     }} />
                     <div className="pt-4 flex justify-center">
